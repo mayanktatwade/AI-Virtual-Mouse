@@ -1,17 +1,13 @@
-
-
 import cv2 as cv
 import numpy as np
 import HandDectectionModule as htm
 import time
 import pyautogui
 
-print('running')
 
 #############################
 wcam, hcam = 640, 480
 wscreen, hscreen = pyautogui.size()
-# print (wscreen,hscreen)
 frameBdr = 100 #Frame Boundary
 smoothening = 5
 
@@ -92,7 +88,7 @@ while True:
         cv.putText(img, 'FPS: ' + str(int(fps)), (10, 50),cv.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 2)
 
         #12) Display
-        cv.imshow('image',img)
+        cv.imshow('Virtual Mouse',img)
         cv.waitKey(1)
 
 
